@@ -2,14 +2,21 @@
 
 ## Overview
 This report contains implementation details and experimental results for remote sensing image segmentation using partial cross-entropy loss. The project explores the impact of hyperparameters on the performance of a segmentation network.
-## Contents
-src/: Contains source code for the segmentation model and loss function.
-data/: Placeholder for remote sensing datasets.
-results/: Directory to store experimental results.
-docs/: Documentation folder.
 
 ## 2. Methodology
+```python
+import torch
+import torch.nn as nn
 
+class PartialCrossEntropyLoss(nn.Module):
+    def __init__(self):
+        super(PartialCrossEntropyLoss, self).__init__()
+
+    def forward(self, inputs, targets, mask):
+        # Apply mask to ignore certain targets
+        masked_targets = targets[mask]
+        masked_inputs = inputs[mask]
+        return nn.CrossEntropyLoss()(masked_inputs, masked_targets)
 ### 2.1 Partial Cross-Entropy Loss
 
 Partial cross-entropy loss is implemented to handle scenarios where only a subset of ground truth labels is available, suitable for remote sensing tasks where annotating every pixel is impractical.
@@ -20,7 +27,7 @@ A remote sensing image dataset is utilized, and point labels are simulated throu
 
 ### 2.3 Segmentation Network Architecture
 
-A U-Net architecture is employed due to its effectiveness in image segmentation tasks, featuring an encoder-decoder structure.A U-Net architecture is employed due to its effectiveness in image segmentation tasks, featuring an encoder-decoder structure.
+A U-Net architecture is employed due to its effectiveness in image segmentation tasks, featuring an encoder-decoder structure. A U-Net architecture is employed due to its effectiveness in image segmentation tasks, featuring an encoder-decoder structure.
 
 ### 2.4 Training and Evaluation
 
@@ -65,13 +72,13 @@ The following results were obtained from the experiments:
 
 Include visualizations or example outputs from your segmentation models here.
 
-## Contributing
 
-4. Conclusion
+
+## 4. Conclusion
 
 The experiment demonstrates that a lower learning rate (0.001) generally leads to better performance in terms of validation accuracy. Larger batch sizes tend to slightly degrade performance, especially when coupled with higher learning rates. This suggests that careful tuning of hyperparameters is crucial for optimizing the segmentation network.
 
-5. Recommendations
+##5. Recommendations
 
 Further investigation could include:
 
