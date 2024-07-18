@@ -74,8 +74,7 @@ Fine-tuning hyperparameters more comprehensively, potentially exploring other op
 Exploring alternative network architectures or additional regularization techniques.
 Scaling experiments with larger datasets and longer training durations to validate findings.
 
-### go to to Jupyter Notebook https:    
-//colab.research.google.com/github/NimraAslamkhan/segmentation-problem-classify-each-deep-learning-/blob/main/segmentation_problem_classify_each_deep_learning_.ipynb
+### go to to Jupyter Notebook https://colab.research.google.com/github/NimraAslamkhan/segmentation-problem-classify-each-deep-learning-/blob/main/segmentation_problem_classify_each_deep_learning_.ipynb
 
 
 
