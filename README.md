@@ -8,18 +8,7 @@ This report contains implementation details and experimental results for remote 
 ### 2.1 Partial Cross-Entropy Loss
 
 Partial cross-entropy loss is implemented to handle scenarios where only a subset of ground truth labels is available, suitable for remote sensing tasks where annotating every pixel is impractical.
-```python
-import torch.nn.functional as F
 
-class PartialCrossEntropyLoss(nn.Module):
-    def __init__(self):
-        super(PartialCrossEntropyLoss, self).__init__()
-
-    def forward(self, input, target):
-        log_prob = F.log_softmax(input, dim=1)
-        loss = -torch.sum(target * log_prob) / input.size(0)
-        return loss
-```python
 
 ### 2.2 Remote Sensing Dataset and Point Label Simulation
 
