@@ -1,4 +1,4 @@
-# Remote Sensing Image Segmentation
+ # Remote Sensing Image Segmentation
 
 ## Overview
 This report contains implementation details and experimental results for remote sensing image segmentation using partial cross-entropy loss. The project explores the impact of hyperparameters on the performance of a segmentation network.
@@ -56,11 +56,9 @@ The following results were obtained from the experiments:
 | 0.01          | 32         | 2.3038        | 2.3037          | 10.00%              |
 | 0.01          | 64         | 2.3041        | 2.3031          | 10.00%              |
 
-### Example Results
 
-![Sample Segmentation](results/sample_segmentation.png)
 
-Include visualizations or example outputs from your segmentation models here.
+
 
 
 
@@ -68,10 +66,16 @@ Include visualizations or example outputs from your segmentation models here.
 
 The experiment demonstrates that a lower learning rate (0.001) generally leads to better performance in terms of validation accuracy. Larger batch sizes tend to slightly degrade performance, especially when coupled with higher learning rates. This suggests that careful tuning of hyperparameters is crucial for optimizing the segmentation network.
 
-##5. Recommendations
+## 5. Recommendations
 
 Further investigation could include:
 
 Fine-tuning hyperparameters more comprehensively, potentially exploring other optimization algorithms.
 Exploring alternative network architectures or additional regularization techniques.
 Scaling experiments with larger datasets and longer training durations to validate findings.
+
+### go to to Jupyter Notebook https:    
+//colab.research.google.com/github/NimraAslamkhan/segmentation-problem-classify-each-deep-learning-/blob/main/segmentation_problem_classify_each_deep_learning_.ipynb
+
+
+
