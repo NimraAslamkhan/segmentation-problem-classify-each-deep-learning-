@@ -19,7 +19,7 @@ class PartialCrossEntropyLoss(nn.Module):
         log_prob = F.log_softmax(input, dim=1)
         loss = -torch.sum(target * log_prob) / input.size(0)
         return loss
-
+```python
 
 ### 2.2 Remote Sensing Dataset and Point Label Simulation
 
